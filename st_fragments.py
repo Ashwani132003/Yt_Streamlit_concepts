@@ -2,8 +2,13 @@ import streamlit as st
 
 st.title('Streamlit Fragments')
 
+
 count = 0
 st.write(f'Count: {count}')
+
+with st.spinner('Wait for it...'):
+    import time
+    time.sleep(5)
 
 # It will rerun the whole app (default streamlit behaviour)
 if st.button('Run whole'):
